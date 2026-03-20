@@ -1,0 +1,32 @@
+// ============================================
+// tsconfig.json
+// Configuración del compilador TypeScript
+// ============================================
+{
+  "compilerOptions": {
+    // ---- Salida ----
+    "target": "ES2020",           // Compilar a ES2020 (soporta opcionales, nullish, etc.)
+    "module": "commonjs",         // Formato de módulos (Node.js usa CommonJS)
+    "outDir": "./dist",           // Carpeta donde va el JS compilado
+    "rootDir": "./src",           // Carpeta raíz del código fuente
+
+    // ---- Tipado estricto ----
+    "strict": true,               // Activa TODAS las verificaciones estrictas
+    "esModuleInterop": true,      // Permite import de módulos CommonJS con sintaxis ES6
+    "forceConsistentCasingInFileNames": true,  // Evita errores por mayúsculas/minúsculas en imports
+
+    // ---- Resolución de módulos ----
+    "resolveJsonModule": true,    // Permite importar archivos .json
+    "declaration": true,          // Genera archivos .d.ts (tipos exportados)
+
+    // ---- Extras útiles ----
+    "skipLibCheck": true,         // Salta verificación de tipos en node_modules (más rápido)
+    "sourceMap": true             // Genera source maps (debug más fácil)
+  },
+  "include": ["src/**/*"],        // Solo compilar archivos dentro de src/
+  "exclude": [
+    "node_modules",               // Nunca compilar dependencias
+    "dist",                       // Nunca compilar salida anterior
+    "**/*.test.ts"                // No compilar tests (Jest los maneja aparte)
+  ]
+}

@@ -1,0 +1,16 @@
+# Dependencias
+node_modules/
+
+# Salida compilada
+dist/
+
+# Cobertura de tests
+coverage/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
