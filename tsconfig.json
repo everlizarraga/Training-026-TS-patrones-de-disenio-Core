@@ -21,12 +21,13 @@
 
     // ---- Extras útiles ----
     "skipLibCheck": true,         // Salta verificación de tipos en node_modules (más rápido)
-    "sourceMap": true             // Genera source maps (debug más fácil)
+    "sourceMap": true,             // Genera source maps (debug más fácil)
+    "types": ["jest"]
   },
   "include": ["src/**/*"],        // Solo compilar archivos dentro de src/
   "exclude": [
     "node_modules",               // Nunca compilar dependencias
-    "dist",                       // Nunca compilar salida anterior
-    "**/*.test.ts"                // No compilar tests (Jest los maneja aparte)
+    "dist"                       // Nunca compilar salida anterior
+    //"**/*.test.ts"                // No compilar tests (Jest los maneja aparte)
   ]
 }
