@@ -27,4 +27,8 @@ module.exports = {
   // Limpia mocks automáticamente entre tests
   // Cada test empieza "limpio" sin estado residual del anterior
   clearMocks: true,
+
+  transformIgnorePatterns: [
+    'node_modules/(?!uuid)'
+  ]
 };

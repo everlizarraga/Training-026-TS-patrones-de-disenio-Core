@@ -22,7 +22,7 @@
     // ---- Extras útiles ----
     "skipLibCheck": true,         // Salta verificación de tipos en node_modules (más rápido)
     "sourceMap": true,             // Genera source maps (debug más fácil)
-    "types": ["jest"]
+    "types": ["jest", "node"]
   },
   "include": ["src/**/*"],        // Solo compilar archivos dentro de src/
   "exclude": [
